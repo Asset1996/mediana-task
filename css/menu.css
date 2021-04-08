@@ -1,0 +1,95 @@
+@media (min-width: 768px) {
+    .menu_nav{
+        position: relative;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu_nav{
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        text-align: left;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 500ms;
+    }
+
+    .menu_nav._show{
+        max-height: 800px;
+    }
+
+    .menu_nav ul {
+        display: flex;
+        flex-direction: column;
+        background-color: moccasin;
+    }
+
+    ._menu_button{
+        position: absolute;
+        right: 10px;
+        background-color: #FFF;
+        border-radius: 2px;
+        height: 30px;
+        width: 30px;
+    }
+
+    ._menu_button button{
+        background-color: #FFF;
+        border: none;
+    }
+
+    ._menu_button button:hover{
+        background-color: #FFF;
+        border: none;
+        box-shadow: none;
+    }
+
+    /* Не активная кнопка */
+    .fa_up{
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        border-bottom: 3px solid #000;
+        width: 19px;
+        transition: 400ms ease;
+    }
+    .fa_mid{
+        visibility: visible;
+        position: absolute;
+        top: 13px;
+        left: 6px;
+        border-bottom: 3px solid #000;
+        width: 19px;
+    }
+    .fa_down{
+        position: absolute;
+        top: 20px;
+        left: 6px;
+        border-bottom: 3px solid #000;
+        width: 19px;
+        transition: 400ms ease;
+    }
+
+    /* Активная кнопка */
+    .fa_up.rotate {
+        top: 13px;
+        left: 6px;
+        transform: rotate(45deg);
+        transition: 400ms ease; 
+    }
+    .fa_mid.rotate {
+        visibility: hidden;
+        transition: 100ms ease;
+    }
+    .fa_down.rotate {
+        top: 13px;
+        left: 6px;
+        transform: rotate(-45deg);
+        transition: 400ms ease;
+    }
+
+    ._logout_nav{
+        right: 60px;
+    }
+}
